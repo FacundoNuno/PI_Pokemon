@@ -47,9 +47,55 @@ const Create = () => {
         });
     };
     
+    
     const handlerSendPokemon = () => {
+        if (creation.name.trim() === '') {
+        alert('Por favor, ingresa el nombre del Pokémon.');
+        return;
+        }
+    
+        if (/\d/.test(creation.name)) {
+        alert('El nombre del Pokémon no puede contener números.');
+        return;
+        }
+    
+        if (!creation.image.startsWith('http')) {
+        alert('Por favor, ingresa una URL válida para la imagen del Pokémon.');
+        return;
+        }
+    
+        if (creation.hp < 0) {
+        alert('La vida del Pokémon no puede ser un valor negativo.');
+        return;
+        }
+    
+        if (creation.attack < 0) {
+        alert('El ataque del Pokémon no puede ser un valor negativo.');
+        return;
+        }
+    
+        if (creation.defense < 0) {
+        alert('La defensa del Pokémon no puede ser un valor negativo.');
+        return;
+        }
+    
+        if (creation.speed < 0) {
+        alert('La velocidad del Pokémon no puede ser un valor negativo.');
+        return;
+        }
+    
+        if (creation.height < 0) {
+        alert('La altura del Pokémon no puede ser un valor negativo.');
+        return;
+        }
+    
+        if (creation.weight < 0) {
+        alert('El peso del Pokémon no puede ser un valor negativo.');
+        return;
+        }
+    
         dispatch(createPokemon(creation));
-    }
+    };
     
     return(
         <div >
@@ -75,7 +121,7 @@ const Create = () => {
                     <select className={styles.selectNone} multiple name="types" onChange={handleTypeChange} />
                     <OptionTypes onChangeType={(e) => handleTypeChange(e, 0)} />
                     <OptionTypes onChangeType={(e) => handleTypeChange(e, 1)} />
-                    <Link to='/home'><button onClick={handlerSendPokemon}>Create New Pokemon</button></Link>
+                    <button onClick={handlerSendPokemon}>Create New Pokemon</button>
                 </form>
             </div>
         </div>
