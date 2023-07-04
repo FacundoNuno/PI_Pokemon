@@ -1,0 +1,43 @@
+.search_box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(218, 46, 46);
+    border: none;
+    padding: 10px;
+    line-height: 30px;
+}
+.formContainer{
+    width: 33%;
+}
+.vacio{
+    width: 33%;
+    display: flex;
+    justify-content: end;
+    margin-right: 100px;
+    
+}
+.divImg{
+    padding-left: 41px;
+    width: 33%;
+}
+.vacio a {
+    margin-right: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+}
+.btnCreate{
+    width: 120px;
+    margin-left: 250px;
+    background: none;
+    border: none;
+    color: antiquewhite;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+.btnCreate:hover{
+    scale: 140%;
+    color: rgb(255, 251, 0);
+}

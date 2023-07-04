@@ -1,0 +1,23 @@
+.form{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+    margin-top: 25px;
+}
+.form form{
+    display: flex;
+    height: 700px;
+    flex-direction: column;
+    background-color: rgb(231, 220, 245);
+    width: 400px;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.form h2{
+    margin: 0;
+}
+.selectNone{
+    display: none;
+}

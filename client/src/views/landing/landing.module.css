@@ -1,0 +1,29 @@
+
+.divContainer{
+    display: flex;
+    background-image: url(../../assets/bg-detail.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+}
+
+.landing{
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    background: none;
+}
+
+
+.landing:hover{
+    cursor: pointer;
+    font-size: 1rem;
+    color: red;
+    
+}

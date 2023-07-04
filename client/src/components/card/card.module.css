@@ -1,0 +1,36 @@
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+    max-height: 260px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 25px;
+    cursor: pointer;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+    margin: 11px;
+    justify-content: center;
+    align-items: center;
+    /*Fondo cards */
+    background: rgba(148, 243, 126, 0.32);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.8px);
+    -webkit-backdrop-filter: blur(5.8px);
+    font-size: 17px;
+}
+.cardContainer p{
+    font-size: 15px;
+    
+}
+.cardContainer:hover{
+    transform: scale(1.05);
+    
+}
+
+.cardContainer img{
+    width: 125px;
+    height: 125px;
+    
+    
+}
