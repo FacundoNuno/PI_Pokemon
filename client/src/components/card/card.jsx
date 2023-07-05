@@ -1,10 +1,7 @@
 import style from"../card/card.module.css"
 
 
-const Card = ({name, imageDB, type, id, types, createDB, imageApi}) => {
-
-
-
+const Card = ({name, image, type, types, createDB, }) => {
     
     
     
@@ -12,11 +9,10 @@ const Card = ({name, imageDB, type, id, types, createDB, imageApi}) => {
     return(
         
         <div className= {style.cardContainer} >
-                {!createDB?<img  src={imageApi } alt="img" />:null}
-                {createDB ? <img src={imageDB} alt="img" /> : null}
+                {<img  src={image} alt="img" />}
                 <h3>{name}</h3>
-                <p>Type: {type?.map(elem => " "+elem)}</p>
-                {createDB ? <p>{types?.map(elem => " "+elem.name)}</p> : null}
+                <p>{type?.map(type => " "+type)}</p>
+                {createDB ? <p>{types?.map(type => " "+type.name)}</p> : null}
             </div>
         
     )

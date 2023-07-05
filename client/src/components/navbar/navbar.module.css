@@ -41,3 +41,9 @@
     scale: 140%;
     color: rgb(255, 251, 0);
 }
+.btnHome{
+    height: 35px;
+    width: 60px;
+    border-radius: 50px;
+    
+}

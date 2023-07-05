@@ -47,10 +47,10 @@ const Create = () => {
         });
     };
     
-    const errors = {}
+    
 
     const handlerSendPokemon = () => {
-        if (creation.name.trim() === '') {
+        if (creation.name.trim() === '' && creation.name.length === 0) {
         alert('Por favor, ingresa el nombre del Pokémon.');
         return;
         }
@@ -65,35 +65,40 @@ const Create = () => {
         return;
         }
     
-        if (creation.hp < 0) {
-        alert('La vida del Pokémon no puede ser un valor negativo.');
+        if (creation.hp < 0 && creation.hp > 1000) {
+        alert('La vida del Pokémon no puede ser un valor negativo ni mayor a 1000.');
         return;
         }
     
-        if (creation.attack < 0) {
-        alert('El ataque del Pokémon no puede ser un valor negativo.');
+        if (creation.attack < 0 && creation.attack > 1000) {
+        alert('El ataque del Pokémon no puede ser un valor negativo ni mayor a 1000.');
         return;
-        }
+        } 
+        
     
-        if (creation.defense < 0) {
-        alert('La defensa del Pokémon no puede ser un valor negativo.');
+        if (creation.defense < 0 && creation.defense > 1000) {
+        alert('La defensa del Pokémon no puede ser un valor negativo ni mayor a 1000.');
         return;
-        }
+        } 
+        
     
-        if (creation.speed < 0) {
-        alert('La velocidad del Pokémon no puede ser un valor negativo.');
+        if (creation.speed < 0 && creation.speed > 1000) {
+        alert('La velocidad del Pokémon no puede ser un valor negativo ni mayor a 1000.');
         return;
-        }
+        } 
+        
     
-        if (creation.height < 0) {
-        alert('La altura del Pokémon no puede ser un valor negativo.');
+        if (creation.height < 0 && creation.height > 1000) {
+        alert('La altura del Pokémon no puede ser un valor negativo ni mayor a 1000.');
         return;
-        }
+        } 
+        
     
-        if (creation.weight < 0) {
-        alert('El peso del Pokémon no puede ser un valor negativo.');
+        if (creation.weight < 0 && creation.weight > 1000) {
+        alert('El peso del Pokémon no puede ser un valor negativo ni mayor a 1000.');
         return;
-        }
+        } 
+        
     
         dispatch(createPokemon(creation));
     };
@@ -103,18 +108,11 @@ const Create = () => {
             <div className={styles.form}>
                 <form >
                     <h2>Name</h2>
-                    <label htmlFor="">
-                        <input name='name' type="text" onChange={handlerCreate} />
-                        {/* {errors.name && <p className={styles.error}>{errors.name}</p>} */}
-                    </label>
+                    <input name='name' type="text" onChange={handlerCreate} />
                     <h2>Image</h2>
-                    <label htmlFor="">
                     <input name='image' type="text" onChange={handlerCreate} />
-                    </label>
                     <h2>Life</h2>
-                    <label htmlFor="">
                     <input name='hp' type="text" onChange={handlerCreate} />
-                    </label>
                     <h2>Attack</h2>
                     <input name='attack' type="text" onChange={handlerCreate} />
                     <h2>Defense</h2>

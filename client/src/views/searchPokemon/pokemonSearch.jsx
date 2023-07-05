@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { getPokemonById } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getPokemonByName } from "../../redux/actions";
@@ -14,6 +13,8 @@ const PokemonSearch = () => {
     const {name} = useParams();
     const dispatch = useDispatch();
     const pokemonsName = useSelector((state) => state.pokemonByName);
+
+    // para manejar mi ciclo de vida del componente
     useEffect(() => {
         dispatch(getPokemonByName(name));
     },[name]);

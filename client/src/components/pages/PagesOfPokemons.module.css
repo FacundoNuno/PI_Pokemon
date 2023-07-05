@@ -3,6 +3,7 @@
     justify-content: center;
     width: 30%;
     gap: 9px;
+    align-items: center;
 }
 .pokemonsPage{
     align-items: center;
@@ -19,7 +20,7 @@
 .buttonPages{
     background: none;
     width: 25px;
-    height: 45px;
+    height: 25px;
     border: none;
     outline: none;
     font-size: large;

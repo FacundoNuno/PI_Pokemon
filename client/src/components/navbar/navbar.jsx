@@ -21,9 +21,11 @@ const Navbar = () => {
      <input type="text" placeholder="Search" onChange={serchByName} />
      <Link to={byName.length === 0 ? "/home" : `/pokemonsearch/${byName}`}>
       <button type="submit">Search Pokemon</button>
+      
      </Link>
     </form>
    </div>
+   <Link to={"/home"}><button className={styles.btnHome} type="submit">To Home</button></Link>
     <Link to={"/create"}><button  className={styles.btnCreate}>Create Pokemon</button></Link>
    <div className={styles.vacio}>
     <a

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllPokemon } from "../../redux/actions";
 import Cards from "../../components/cardsContainer/cards";
 import Pages from "../../components/pages/PagesOfPokemons";
-import Filters from "../../components/filters/filters";
+import Filters from "../../components/filters/Filters";
 
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
 
   //creo los estados uno para en que pagina estoy y el otro parea cuantos pokemons voy a mostrar por pagina
   const [pagePages, setPagePages] = useState(1);
-  const [pokemonsPerPage] = useState(130);
+  const [pokemonsPerPage] = useState(12);
   
   const indexLastPokemon = pagePages * pokemonsPerPage; // indice del ultimo pokemon = 12
   const indexOfFirstPokemon = indexLastPokemon - pokemonsPerPage; // obtengo el indice de el primero pokemon de cada pagina (pagina 2)indice[0] = 12
@@ -26,23 +26,22 @@ const Home = () => {
   }, [dispatch]);
 
 // creo la funcion para actualizar el valor del estado que seria en que pagina estoy
- const newPage = (num) => {
+const newPage = (num) => {
   setPagePages(num);
- };
+};
 
- return (
+return (
   <div className={styles.home}>
     <Filters/>
-   <Pages
+    <Pages
     pagePages={pagePages}
     newPage={newPage}
     pokemons={pokemons.length}
     pokemonsPerPage={pokemonsPerPage}
-   />
-   <Cards pokemons={actualPokemon} />
-   
+    />
+    <Cards pokemons={actualPokemon} />
   </div>
- );
+);
 };
 
 export default Home;

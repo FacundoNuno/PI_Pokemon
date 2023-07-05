@@ -1,0 +1,18 @@
+.filtersContainer{
+    width: 100%;
+    
+}
+.filters {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+.filters select{
+    height: 25px;
+    width: 140px;
+    border: 2px solid rgb(4, 0, 255);
+    border-radius: 10px;
+    text-align: center;
+    background-color: yellow;
+}
