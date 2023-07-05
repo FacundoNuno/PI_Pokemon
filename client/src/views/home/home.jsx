@@ -15,7 +15,7 @@ const Home = () => {
 
   //creo los estados uno para en que pagina estoy y el otro parea cuantos pokemons voy a mostrar por pagina
   const [pagePages, setPagePages] = useState(1);
-  const [pokemonsPerPage] = useState(12);
+  const [pokemonsPerPage] = useState(130);
   
   const indexLastPokemon = pagePages * pokemonsPerPage; // indice del ultimo pokemon = 12
   const indexOfFirstPokemon = indexLastPokemon - pokemonsPerPage; // obtengo el indice de el primero pokemon de cada pagina (pagina 2)indice[0] = 12

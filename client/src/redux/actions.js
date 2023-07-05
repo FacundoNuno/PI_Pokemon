@@ -9,7 +9,7 @@ export const FILTER_POKEMONSTYPE = 'FILTER_POKEMONSTYPE';
 export const FILTER_POKEMONS_AZ = 'FILTER_POKEMONS_AZ';
 export const FILTER_BY_ATTACK = 'FILTER_BY_ATTACK';
 export const FILTER_BY_ORIGIN = 'FILTER_BY_ORIGIN';
-export const FILTER_BY_API_BD = 'FILTER_BY_API_BD';
+
 
 
 export const getAllPokemon = () => {

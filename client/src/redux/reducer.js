@@ -62,7 +62,12 @@ function rootReducer(state = initialState, action) {
             }
             return {
                 ...state,
-                allPokemons: [...state.filteredCopy].filter(pokemon => pokemon.type.includes(action.payload))
+                allPokemons: [...state.filteredCopy].filter(pokemon =>{ 
+                    if (pokemon.createDB && pokemon.types ) {
+                        return pokemon.types.map(type=>type.name).includes(action.payload)
+                    }else{
+                        return pokemon.type.includes(action.payload)}
+                    })
             }
             
         case FILTER_POKEMONS_AZ:
@@ -92,11 +97,11 @@ function rootReducer(state = initialState, action) {
             }
             break
         case FILTER_BY_ORIGIN:
-            const stateAllPokemons = state.allPokemons
+            const stateAllPokemons = state.filteredCopy
             const helpOrigin = action.payload === "Database" ? stateAllPokemons.filter(pokemon => pokemon.createDB) : stateAllPokemons.filter(pokemon => !pokemon.createDB);
             return {
                 ...state,
-                filteredCopy: action.payload === "All" ? state.allPokemons : helpOrigin
+                allPokemons:  action.payload === "All" ? stateAllPokemons : helpOrigin
             }
             
             default:

@@ -3,7 +3,7 @@ import { useState  } from 'react'
 import styles from './create.module.css'
 import OptionTypes from '../create/optionType'
 import { createPokemon } from '../../redux/actions'
-import { Link } from 'react-router-dom/cjs/react-router-dom.min'
+
 
 const Create = () => {
 
@@ -47,7 +47,8 @@ const Create = () => {
         });
     };
     
-    
+    const errors = {}
+
     const handlerSendPokemon = () => {
         if (creation.name.trim() === '') {
         alert('Por favor, ingresa el nombre del Pokémon.');
@@ -102,11 +103,18 @@ const Create = () => {
             <div className={styles.form}>
                 <form >
                     <h2>Name</h2>
-                    <input name='name' type="text" onChange={handlerCreate} />
+                    <label htmlFor="">
+                        <input name='name' type="text" onChange={handlerCreate} />
+                        {/* {errors.name && <p className={styles.error}>{errors.name}</p>} */}
+                    </label>
                     <h2>Image</h2>
+                    <label htmlFor="">
                     <input name='image' type="text" onChange={handlerCreate} />
+                    </label>
                     <h2>Life</h2>
+                    <label htmlFor="">
                     <input name='hp' type="text" onChange={handlerCreate} />
+                    </label>
                     <h2>Attack</h2>
                     <input name='attack' type="text" onChange={handlerCreate} />
                     <h2>Defense</h2>

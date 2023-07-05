@@ -18,7 +18,7 @@ const Pages = ({pokemonsPerPage, pokemons, newPage, pagePages}) => {
             numberPage &&
             numberPage.map(number =>(
                 <div className={styles.pokemonsPage} key={number}>
-                    <p  onClick={()=> newPage(number)}>{number}</p>
+                    <p onClick={()=> newPage(number)}>{number}</p>
                 </div>
             ))
         }
