@@ -14,7 +14,7 @@ const allPokemons = async () => {
     const pokemonObj = {
         id: pokemonData.id,
         name: pokemonData.name,
-        image: pokemonData.sprites,
+        image: pokemonData.sprites["versions"]["generation-v"]["black-white"]["animated"]["front_default"],
         hp: pokemonData.stats.find((elem) => elem.stat.name === 'hp').base_stat,
         attack: pokemonData.stats.find((elem) => elem.stat.name === 'attack').base_stat,
         defense: pokemonData.stats.find((elem) => elem.stat.name === 'defense').base_stat,
