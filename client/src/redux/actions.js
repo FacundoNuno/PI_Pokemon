@@ -14,7 +14,7 @@ export const FILTER_BY_ORIGIN = 'FILTER_BY_ORIGIN';
 
 export const getAllPokemon = () => {
 return async function (dispatch) {
-    const response = await axios.get('/pokemons/allpokemons');
+    const response = await axios.get('pokemons/allpokemons');
     return dispatch({
         type: GET_POKEMON,
         payload: response.data
@@ -25,7 +25,7 @@ return async function (dispatch) {
 
 export const getPokemonById = (id) => {
     return async function (dispatch) {
-        const response = await axios.get(`/pokemons/${id}`);
+        const response = await axios.get(`pokemons/${id}`);
         return dispatch({
             type: GET_POKEMONID,
             payload: response.data
@@ -35,7 +35,7 @@ export const getPokemonById = (id) => {
 
 export const getPokemonByName = (name) => {
     return async function (dispatch) {
-        const response = await axios.get(`/pokemons/name?name=${name}`);
+        const response = await axios.get(`pokemons/name?name=${name}`);
         return dispatch({
             type: GET_POKEMONBYNAME,
             payload: response.data
@@ -45,7 +45,7 @@ export const getPokemonByName = (name) => {
 
 export const createPokemon = (body) => {
     return async function (dispatch) {
-        const response = await axios.post(`/pokemons`, body);
+        const response = await axios.post(`pokemons`, body);
         return dispatch({
             type: CREATE_POKEMON,
             payload: response.data
@@ -56,7 +56,7 @@ export const createPokemon = (body) => {
 
 export const getTypes = () => {
     return async function (dispatch) {
-        const response = await axios.get(`/pokemons/types`);
+        const response = await axios.get(`pokemons/types`);
         return dispatch({
             type: GET_TYPES,
             payload: response.data

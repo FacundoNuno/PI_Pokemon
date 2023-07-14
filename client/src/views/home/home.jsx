@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllPokemon } from "../../redux/actions";
 import Cards from "../../components/cardsContainer/cards";
 import Pages from "../../components/pages/PagesOfPokemons";
-import Filters from "../../components/filters/Filters";
+import Filters from "../filters/Filters";
 
 
 const Home = () => {
