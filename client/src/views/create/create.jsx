@@ -10,7 +10,6 @@ const Create = () => {
     const dispatch = useDispatch();
     
     
-
     const [creation, setCreation] = useState(
         {
             "name": "",
@@ -124,7 +123,7 @@ const Create = () => {
                     <h2>Weight</h2>
                     <input name='weight' type="text" onChange={handlerCreate} />
                     <h2>Type</h2>
-                    <select className={styles.selectNone} multiple name="types" onChange={handleTypeChange} />
+                    <select className={styles.selectNone} multiple name="types" onChange={handleTypeChange} onClick={handlerSendPokemon} />
                     <OptionTypes onChangeType={(e) => handleTypeChange(e, 0)} />
                     <OptionTypes onChangeType={(e) => handleTypeChange(e, 1)} />
                     <button onClick={handlerSendPokemon}>Create New Pokemon</button>

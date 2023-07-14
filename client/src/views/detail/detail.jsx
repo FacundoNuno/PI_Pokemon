@@ -7,12 +7,6 @@ import style from  "./detail.module.css";
 
 
 
-
-
-
-
-
-
 const Details = () => {
 
 
@@ -27,7 +21,7 @@ const Details = () => {
 
 
     return(
-        <div  className={style.containerDetail}>
+        <div className={style.containerDetail}>
             <div className={style.detail}>
             <p>Id: {pokemonsId.id}</p>
             <h2>{pokemonsId.name}</h2>

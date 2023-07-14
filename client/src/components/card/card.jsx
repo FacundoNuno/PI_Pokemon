@@ -13,7 +13,7 @@ const Card = ({name, image, type, types, createDB, }) => {
                 <h3>{name}</h3>
                 <p>{type?.map(type => " "+type)}</p>
                 {createDB ? <p>{types?.map(type => " "+type.name)}</p> : null}
-            </div>
+        </div>
         
     )
 }

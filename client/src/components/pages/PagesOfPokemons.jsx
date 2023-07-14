@@ -17,9 +17,7 @@ const Pages = ({pokemonsPerPage, pokemons, newPage, pagePages}) => {
         {
             numberPage &&
             numberPage.map(number =>(
-                <div className={styles.pokemonsPage} key={number}>
-                    <p onClick={()=> newPage(number)}>{number}</p>
-                </div>
+                <div className={`${styles.pokemonsPage} ${pagePages === number ? styles.active : ''}`} key={number}> <p onClick={() => newPage(number)}>{number}</p> </div>
             ))
         }
         <button className={styles.buttonPages} type="button" onClick={()=>{pagePages < totalPages && newPage(pagePages + 1)}} ><FontAwesomeIcon icon={faChevronRight} className={styles.buttonPages}/></button>

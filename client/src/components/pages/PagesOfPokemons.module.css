@@ -33,3 +33,12 @@
     cursor: pointer;
     top: 2px;
 }
+.active {
+    display: flex;
+    background-color: rgb(242, 245, 242); /* Ejemplo de estilo para resaltar la página actual */
+    color: #000000;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    text-align: center;
+}
