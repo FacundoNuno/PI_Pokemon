@@ -1,4 +1,5 @@
 import "./App.css";
+import axios from "axios";
 import Landing from "./views/landing/landing";
 import Home from "./views/home/home";
 import Detail from "./views/detail/detail";
@@ -7,6 +8,8 @@ import Pokemonsearch from "./views/searchPokemon/pokemonSearch";
 import { Route } from "react-router-dom";
 import Navbar from "./components/navbar/navbar";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+
+axios.defaults.baseURL = "http://localhost:3001";
 
 function App() {
  const location = useLocation();
