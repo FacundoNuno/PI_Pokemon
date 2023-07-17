@@ -56,7 +56,7 @@ export const createPokemon = (body) => {
 
 export const getTypes = () => {
     return async function (dispatch) {
-        const response = await axios.get(`https://backpokemon-1vqb.onrender.com/pokemons/types`);
+        const response = await axios.get(`https://backpokemon-1vqb.onrender.compokemons/types`);
         return dispatch({
             type: GET_TYPES,
             payload: response.data
