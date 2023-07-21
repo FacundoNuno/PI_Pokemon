@@ -15,7 +15,7 @@
 .vacio{
     width: 33%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-right: 100px;
     
 }
