@@ -4,11 +4,6 @@ const getAllPokemonsNew = require("../controllers/allPokemonController");
 
 
 
-
-
-
-
-
 const pokemonsApiDb = async (req, res) => {
     try {
         const pokemonsDb = await getAllPokemonsNew();
