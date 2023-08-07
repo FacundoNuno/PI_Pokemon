@@ -9,7 +9,7 @@ import { Route } from "react-router-dom";
 import Navbar from "./components/navbar/navbar";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
-axios.defaults.baseURL = "https://backpokemon-1vqb.onrender.com/";
+axios.defaults.baseURL = "https://backpokemon-1vqb.onrender.com";
 
 function App() {
  const location = useLocation();
