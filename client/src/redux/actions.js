@@ -14,7 +14,7 @@ export const FILTER_BY_ORIGIN = 'FILTER_BY_ORIGIN';
 
 export const getAllPokemon = () => {
 return async function (dispatch) {
-    const response = await axios.get(`pokemons/allpokemons`);
+    const response = await axios.get("pokemons/allpokemons");
     return dispatch({
         type: GET_POKEMON,
         payload: response.data
